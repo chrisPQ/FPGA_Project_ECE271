@@ -1,0 +1,317 @@
+|Lab6
+Hsync <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+clk => clockdivider:inst5.clk
+reset => clockdivider:inst5.reset
+reset => inst17.IN1
+reset => inst18.IN1
+Vsync <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+blanking <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+clk_div <= clkdiv.DB_MAX_OUTPUT_PORT_TYPE
+Horizontal_Location[0] <= counter:inst.q[0]
+Horizontal_Location[1] <= counter:inst.q[1]
+Horizontal_Location[2] <= counter:inst.q[2]
+Horizontal_Location[3] <= counter:inst.q[3]
+Horizontal_Location[4] <= counter:inst.q[4]
+Horizontal_Location[5] <= counter:inst.q[5]
+Horizontal_Location[6] <= counter:inst.q[6]
+Horizontal_Location[7] <= counter:inst.q[7]
+Horizontal_Location[8] <= counter:inst.q[8]
+Horizontal_Location[9] <= counter:inst.q[9]
+Vertical_Location[0] <= counter:inst6.q[0]
+Vertical_Location[1] <= counter:inst6.q[1]
+Vertical_Location[2] <= counter:inst6.q[2]
+Vertical_Location[3] <= counter:inst6.q[3]
+Vertical_Location[4] <= counter:inst6.q[4]
+Vertical_Location[5] <= counter:inst6.q[5]
+Vertical_Location[6] <= counter:inst6.q[6]
+Vertical_Location[7] <= counter:inst6.q[7]
+Vertical_Location[8] <= counter:inst6.q[8]
+Vertical_Location[9] <= counter:inst6.q[9]
+
+
+|Lab6|comparator:inst3
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|counter:inst
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+reset => q[5]~reg0.ACLR
+reset => q[6]~reg0.ACLR
+reset => q[7]~reg0.ACLR
+reset => q[8]~reg0.ACLR
+reset => q[9]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|clockdivider:inst5
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|synchronizer:inst12
+clk => q~reg0.CLK
+clk => n1.CLK
+d => n1.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst14
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst2
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst8
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|counter:inst6
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+clk => q[9]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+reset => q[5]~reg0.ACLR
+reset => q[6]~reg0.ACLR
+reset => q[7]~reg0.ACLR
+reset => q[8]~reg0.ACLR
+reset => q[9]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|synchronizer:inst19
+clk => q~reg0.CLK
+clk => n1.CLK
+d => n1.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst16
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst7
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst15
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab6|comparator:inst13
+a[0] => LessThan0.IN20
+a[0] => LessThan1.IN20
+a[1] => LessThan0.IN19
+a[1] => LessThan1.IN19
+a[2] => LessThan0.IN18
+a[2] => LessThan1.IN18
+a[3] => LessThan0.IN17
+a[3] => LessThan1.IN17
+a[4] => LessThan0.IN16
+a[4] => LessThan1.IN16
+a[5] => LessThan0.IN15
+a[5] => LessThan1.IN15
+a[6] => LessThan0.IN14
+a[6] => LessThan1.IN14
+a[7] => LessThan0.IN13
+a[7] => LessThan1.IN13
+a[8] => LessThan0.IN12
+a[8] => LessThan1.IN12
+a[9] => LessThan0.IN11
+a[9] => LessThan1.IN11
+agtc <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+altc <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+

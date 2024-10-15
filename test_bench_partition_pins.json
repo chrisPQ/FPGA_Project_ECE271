@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Hsync",
+					"strict" : false
+				},
+				{
+					"name" : "Vsync",
+					"strict" : false
+				},
+				{
+					"name" : "blanking",
+					"strict" : false
+				},
+				{
+					"name" : "clk_div",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Horizontal_Location[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Vertical_Location[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
