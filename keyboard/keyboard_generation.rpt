@@ -1,0 +1,69 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard\simulation" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading 271 test bench/keyboard.qsys
+Progress: Reading input file
+Progress: Adding ps2_0 [altera_up_avalon_ps2 18.0]
+Progress: Parameterizing module ps2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: keyboard: Generating keyboard "keyboard" for SIM_VERILOG
+Info: ps2_0: Starting Generation of PS2 Controller
+Error: ps2_0: The input clock frequency must be known at generation time.
+Info: ps2_0: "keyboard" instantiated altera_up_avalon_ps2 "ps2_0"
+Info: keyboard: Done "keyboard" with 2 modules, 5 files
+Error: qsys-generate failed with exit code 1: 1 Error, 0 Warnings
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard\keyboard.spd" --output-directory="C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard\keyboard.spd --output-directory=C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/bestl/Documents/Program/272_Labs/271 test bench/keyboard/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard.qsys" --block-symbol-file --output-directory="C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading 271 test bench/keyboard.qsys
+Progress: Reading input file
+Progress: Adding ps2_0 [altera_up_avalon_ps2 18.0]
+Progress: Parameterizing module ps2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard.qsys" --synthesis=VERILOG --greybox --output-directory="C:\Users\bestl\Documents\Program\272_Labs\271 test bench\keyboard\synthesis" --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading 271 test bench/keyboard.qsys
+Progress: Reading input file
+Progress: Adding ps2_0 [altera_up_avalon_ps2 18.0]
+Progress: Parameterizing module ps2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: keyboard: Generating keyboard "keyboard" for QUARTUS_SYNTH
+Info: ps2_0: Starting Generation of PS2 Controller
+Error: ps2_0: The input clock frequency must be known at generation time.
+Info: ps2_0: "keyboard" instantiated altera_up_avalon_ps2 "ps2_0"
+Info: keyboard: Done "keyboard" with 2 modules, 5 files
+Info: Generating third-party timing and resource estimation model ...
+Error: Third-party timing and resource estimation model project creation failed: C:/intelfpga_lite/18.0/quartus\bin64/quartus_sh -t quartus_greybox.tcl
+Error: qsys-generate failed with exit code 1: 2 Errors, 0 Warnings
+Info: Finished: Create HDL design files for synthesis

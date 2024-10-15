@@ -1,0 +1,21 @@
+# system info keyboard on 2023.06.07.19:29:46
+system_info:
+name,value
+DEVICE,10M50DAF484C7G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1686191385
+#
+#
+# Files generated for keyboard on 2023.06.07.19:29:46
+files:
+filepath,kind,attributes,module,is_top
+simulation/keyboard.v,VERILOG,,keyboard,true
+simulation/submodules/altera_up_ps2.v,VERILOG,,keyboard_ps2_0,false
+simulation/submodules/altera_up_ps2_command_out.v,VERILOG,,keyboard_ps2_0,false
+simulation/submodules/altera_up_ps2_data_in.v,VERILOG,,keyboard_ps2_0,false
+simulation/submodules/keyboard_ps2_0.v,VERILOG,,keyboard_ps2_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+keyboard.ps2_0,keyboard_ps2_0

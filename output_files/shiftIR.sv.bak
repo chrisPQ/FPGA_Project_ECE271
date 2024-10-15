@@ -1,0 +1,21 @@
+module shiftIR #(parameter N = 8) (input logic clock, input logic IR, input logic reset, output logic NS, output logic d[N-1:0]);
+
+	logic[16:0] count;
+	logic[18:0] nsCount;
+	
+	alway_ff@(posedge clk, posedge IR)
+		if(IR) 
+		begin 
+			if(count >= 3000) d <= {d[7:1], 1};
+			else d <= {d[7:0], 0};
+			count <= 0;
+		end
+		else 
+		begin
+		count <= count + 1;
+		nsCount <= nsCount + 1;
+		if(nsCount >= 168750) NS <= 1;
+		end
+endmodule 
+		
+		
