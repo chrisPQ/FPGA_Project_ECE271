@@ -1,0 +1,14 @@
+restart -force
+view wave
+
+add wave data
+add wave reset
+add wave clk
+add wave horizontalStart
+add wave verticalStart
+
+force clk 0 0, 1 10ps -r 20ps
+force reset 0 0, 1 20, 0 40
+force data 00 0ps, 01 50ps, 10 100ps, 11 150ps -r 200ps
+
+run 800ps

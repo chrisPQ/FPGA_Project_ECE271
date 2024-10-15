@@ -1,0 +1,11 @@
+restart -force
+view wave
+
+add wave data
+add wave select
+add wave out
+
+force data 000 0, 001 50, 010 100, 011 150, 100 200, 101 250, 110 300, 111 350 -r 400
+force select 0 0, 1 25 -r 50
+
+run 800ps

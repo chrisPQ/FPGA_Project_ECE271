@@ -1,0 +1,12 @@
+restart -force
+view wave
+
+add wave clk
+add wave reset
+add wave horizontalSync
+add wave counter
+
+force clk 0 0, 1 1 -r 2ps
+force reset 0 0, 1 20, 0 40
+
+run 4000ps

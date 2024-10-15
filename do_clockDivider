@@ -1,0 +1,11 @@
+restart -force
+view wave
+
+add wave clk
+add wave q
+add wave reset
+
+force clk 0 0, 1 10ps -r 20ps
+force reset 0 0, 1 20, 0 40
+
+run 800ps
