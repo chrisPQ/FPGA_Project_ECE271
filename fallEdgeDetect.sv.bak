@@ -1,0 +1,15 @@
+module fallEdgeDetect (input logic clk, input logic level_sig_b, output logic fall_edge_sig_b);
+
+	logic level_sig_b_ff;
+	
+
+	always_ff @(posedge clk or negedge IR) begin
+	  if(!IR)
+		 level_sig_b_ff <= 1'b0;
+	  else
+		 level_sig_b_ff <= level_sig_b;
+	end
+
+	assign fall_edge_sig_b = (~level_sig_b) & level_sig_b_ff;
+	
+endmodule 

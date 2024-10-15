@@ -1,0 +1,5 @@
+module xBitMux #(parameter width = 3) (input logic data, input logic select, output logic out);
+
+	assign out = select ? data : 0;
+	
+endmodule 

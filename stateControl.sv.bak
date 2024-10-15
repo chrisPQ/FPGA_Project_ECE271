@@ -1,0 +1,17 @@
+module stateControl (input logic CLK, input logic reset, input logic IR, input logic start, input logic data, input logic decode, output logic startEN, output logic dataEn, output logic decodeEn, output logic completeReset);
+	typedef enum logic [1:0] {S0, S1, S2, S3} statetype; 
+	statetype [1:0] state, nextstate; 
+	
+	always_ff @(posedge clk, posedge reset) 
+		if (reset) state <= S0; 
+		else state <= nextstate;
+		
+	always_comb 
+		case (state) 
+			S0: begin if(IR == 0) nextstate <= S1; completeReset <= 1; decodeEn <= 0; end
+			S1: begin if(start) nextstate <= S2; startEn <= 1; end
+			S2: begin if(data) nextstate <= S3; startEn <= 0; dataEn <= 1; end
+			S3: begin if(decode) nextstate <= S0; dataEn <= 0; decodeEn <= 1; end
+			default: nextstate <= S0; 
+		endcase
+endmodule 

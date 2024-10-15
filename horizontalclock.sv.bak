@@ -1,0 +1,27 @@
+module horizontalclock(input logic clk, input logic reset, output logic horizontalSync);
+	typedef enum logic [1:0] {S0, S1} statetype; 
+	statetype [1:0] state, nextstate; 
+	
+	logic counter;
+	
+	always_ff @(posedge clk, posedge reset)
+		if(reset) 
+			state <= S0;
+			counter <= 0;
+		case (state)
+			
+			S0: begin
+					if (counter > 95) 
+						state <= S1;
+					counter <= counter + 1;
+					horizontalSync = 0;
+				 end
+			S1: begin
+					if (counter > 799) 
+						counter <= 0;
+						state <= S0;
+					horizontalSync = 1;
+				 end
+			default: begin state <= S0; counter <= 0; end
+		endcase
+endmodule
